@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>NextCodeLab — Windows Apps, Utilities, AI Tools & Experiments</title>
+    <meta name="description" content="NextCodeLab is a personal lab for building Windows applications, utilities, AI-powered tools, and experiments. Browse and download free, open-source software." />
+    <meta name="keywords" content="NextCodeLab, Windows apps, utilities, AI tools, open source, developer tools, free software" />
+    <meta name="author" content="NextCodeLab" />
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="NextCodeLab — Windows Apps, Utilities, AI Tools & Experiments" />
+    <meta property="og:description" content="Browse and download free, open-source Windows applications, utilities, and AI-powered tools." />
+    <meta property="og:url" content="https://nextcodelab.github.io/" />
+    <meta property="og:site_name" content="NextCodeLab" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NextCodeLab — Windows Apps, Utilities, AI Tools & Experiments" />
+    <meta name="twitter:description" content="Browse and download free, open-source Windows applications, utilities, and AI-powered tools." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextcodelab.github.io/" />
+    <script type="module" crossorigin src="./assets/index-BSwcSb6M.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-D60dzuES.css">
+    <script type="module">
+    <script>
+       sessionStorage.redirect = location.href;
+   </script>
+if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+  </body>
+</html>
+

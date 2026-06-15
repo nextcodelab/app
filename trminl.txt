@@ -1,0 +1,4 @@
+serve dist
+
+
+git remote add origin https://github.com/nextcodelab/app.git
